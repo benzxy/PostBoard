@@ -16,74 +16,65 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            overflow: auto;
         }
         .container {
-            width: 80%;
-            max-width: 800px;
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 30px;
         }
         h1 {
             font-size: 3rem;
             margin-bottom: 20px;
         }
-        .search-bar {
-            margin: 20px 0;
+        .content-blocks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-            font-size: 1rem;
-        }
-        .quick-links {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            gap: 10px;
-        }
-        .quick-links a, .button {
-            text-decoration: none;
-            color: white;
+        .content-block {
             background-color: #333;
-            padding: 15px 20px;
-            border-radius: 8px;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex: 1;
-            max-width: 120px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
         }
-        .quick-links a:hover, .button:hover {
+        .content-block:hover {
             background-color: #444;
         }
-        .icon {
+        .content-block i {
             margin-right: 10px;
-        }
-        .button i {
-            margin-right: 8px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Szvy Central V2</h1>
-        <div class="search-bar">
-            <input type="text" placeholder="Search freely with Szvy Central...">
-        </div>
-        <div class="quick-links">
-            <a href="https://www.google.com" target="_blank">Google</a>
-            <a href="https://now.gg" target="_blank">Now.GG</a>
-            <a href="https://www.nvidia.com/en-us/geforce-now/" target="_blank">Geforce Now</a>
-            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-            <a href="#" target="_blank">Add Site</a>
-        </div>
-        <!-- Button with controller icon -->
-        <div class="quick-links" style="margin-top: 20px;">
-            <a href="https://example-gaming-site.com" target="_blank" class="button">
+        <h1>GeoMathly V2</h1>
+        <div class="content-blocks">
+            <a href="https://www.google.com" target="_blank" class="content-block">
+                <i class="fab fa-google"></i> Google
+            </a>
+            <a href="https://now.gg" target="_blank" class="content-block">
+                <i class="fas fa-cloud"></i> Now.GG
+            </a>
+            <a href="https://www.nvidia.com/en-us/geforce-now/" target="_blank" class="content-block">
+                <i class="fas fa-gamepad"></i> GeForce Now
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="content-block">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+            <a href="https://example-gaming-site.com" target="_blank" class="content-block">
                 <i class="fas fa-gamepad"></i> Game Hub
+            </a>
+            <a href="#" target="_blank" class="content-block">
+                <i class="fas fa-plus"></i> Add Site
             </a>
         </div>
     </div>
