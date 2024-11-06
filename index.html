@@ -109,22 +109,7 @@
   </head>
   <body>
     <h1></h1>
-    <div class="counter">Users visited: <span id="userCount">0</span></div>
-
-    <script>
-      // Check if 'userCount' exists in localStorage
-      if (localStorage.getItem("userCount")) {
-        // Increment the count if it already exists
-        let count = parseInt(localStorage.getItem("userCount")) + 1;
-        localStorage.setItem("userCount", count);
-      } else {
-        // Set the initial count to 1 if it doesn't exist
-        localStorage.setItem("userCount", 1);
-      }
-
-      // Update the counter on the page
-      document.getElementById("userCount").textContent =
-        localStorage.getItem("userCount");
+ 
     </script>
   </body>
 </html>
