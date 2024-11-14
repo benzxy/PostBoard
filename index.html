@@ -1,164 +1,163 @@
-</html>
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icon Navigation Bar</title>
-    <!-- Add Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuroraProxy</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        /* Navbar Container */
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #111;
-            padding: 10px;
-        }
+      body {
+        background-color: #1d1d1d;
+        color: #ccc;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+      }
 
-        /* Icon Styling */
-        .navbar a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
+      /* Navbar */
+      nav {
+        background-color: #2b2b2b;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+        font-size: 18px;
+      }
 
-        .navbar a:hover {
-            color: #888;
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        position: relative;
+      }
+
+      nav a:hover {
+        color: #f5c32c;
+      }
+
+      nav a.active {
+        color: #f5c32c;
+      }
+
+      /* Main Content */
+      .container {
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #ffff;
+        margin-bottom: 20px;
+      }
+
+      .input-box {
+        margin: 20px auto;
+        width: 500px;
+        padding: 15px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        font-size: 18px;
+        background-color: #333;
+        color: #ccc;
+        text-align: center;
+        outline: none;
+        transition: all 0.3s;
+      }
+
+      .input-box:hover,
+      .input-box:focus {
+        border-color: #f5c32c;
+        box-shadow: 0 0 10px #f5c32c, 0 0 20px #32c3f5;
+      }
+
+      .description {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #888;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Background shapes */
+      .shape {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+
+      .shape.triangle {
+        width: 60px;
+        height: 60px;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Animations */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
         }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .shape {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      /* Shape positions */
+      .shape1 {
+        top: 10%;
+        left: 20%;
+        width: 30px;
+        height: 30px;
+      }
+      .shape2 {
+        top: 40%;
+        left: 70%;
+        width: 40px;
+        height: 40px;
+      }
+      .shape3 {
+        top: 70%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+      }
     </style>
-</head>
-<body>
-    <!-- Navbar with Icons -->
-    <div class="navbar">
-        <a href="home.html" title="Home">
-            <i class="fas fa-home"></i>
-        </a>
-        <a href="https://chstextbook.github.io/" title="Games">
-            <i class="fas fa-gamepad"></i>
-        </a>
-        <a href="https://benzxy.github.io/apps.github.io/" title="Dashboard">
-            <i class="fas fa-th-large"></i>
-        </a>
-        <a href="videos.html" title="Videos">
-            <i class="fas fa-film"></i>
-        </a>
-        <a href="https://benzxy.github.io/gt54iu5iu.github.io/" title="Settings">
-            <i class="fas fa-cog"></i>
-        </a>
-        <a href="https://benzxy.github.io/Settings.github.io/" title="Apps">
-            <i class="fas fa-plus"></i>
-        </a>
-        <a href="discord.html" title="Discord">
-            <i class="fab fa-discord"></i>
-        </a>
-    </div>
-</body>
-</html>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoMathly V2</title>
-    <!-- Add Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #fff;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            width: 80%;
-            max-width: 800px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .search-bar {
-            margin: 20px 0;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-            font-size: 1rem;
-        }
-        .quick-links {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            gap: 10px;
-        }
-        .quick-links a, .button {
-            text-decoration: none;
-            color: white;
-            background-color: #333;
-            padding: 15px 20px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
-            max-width: 120px;
-        }
-        .quick-links a:hover, .button:hover {
-            background-color: #444;
-        }
-        .icon {
-            margin-right: 10px;
-        }
-        .button i {
-            margin-right: 8px;
-        }
-    </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="https://chstextbook.github.io/">Games</a>
+      <a href="#">Discord</a>
+      <a href="#">Chatroom</a>
+      <a href="#">Settings</a>
+      <a href="#"></a>
+    </nav>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1>GeoMathly V2</h1>
-        <div class="search-bar">
-            <input type="text" placeholder="Search freely with Szvy Central...">
-        </div>
-        <div class="quick-links">
-            <a href="https://www.google.com" target="_blank">Google</a>
-            <a href="https://now.gg" target="_blank">Now.GG</a>
-            <a href="https://www.nvidia.com/en-us/geforce-now/" target="_blank">Geforce Now</a>
-            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-            <a href="#" target="_blank">Add Site</a>
-        </div>
-        <!-- Button with controller icon -->
-        <div class="quick-links" style="margin-top: 20px;">
-            <a href="https://chstextbook.github.io/" target="_blank" class="button">
-                <i class="fas fa-gamepad"></i> Game Hub
-            </a>
-        </div>
+      <div class="title">AuroraProxy</div>
+      <input
+        type="text"
+        class="input-box"
+        placeholder="Enter a URL or Search"
+      />
+      <p class="description"></p>
     </div>
-</body>
+  </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
+<html></html>
+<div
+ 
