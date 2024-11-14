@@ -1,4 +1,4 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -85,6 +85,27 @@
         margin-right: auto;
       }
 
+      /* Search Results */
+      .search-results {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #ccc;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .result-item {
+        padding: 8px;
+        border-bottom: 1px solid #444;
+        cursor: pointer;
+        color: #f5c32c;
+      }
+
+      .result-item:hover {
+        color: #32c3f5;
+      }
+
       /* Background shapes */
       .shape {
         position: absolute;
@@ -138,10 +159,12 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <a href="https://benzxy.github.io/GeoMathlyV2.github.io/" class="active">Home</a>
+      <a href="https://benzxy.github.io/GeoMathlyV2.github.io/" class="active"
+        >Home</a
+      >
       <a href="https://chstextbook.github.io/">Games</a>
       <a href="#">Discord</a>
-      <a href="#">Chatroom</a>
+      <a href="https://y99.in/web/login">Chatroom</a>
       <a href="#">Settings</a>
       <a href="#"></a>
     </nav>
@@ -151,13 +174,63 @@
       <div class="title">AuroraProxy</div>
       <input
         type="text"
+        id="searchInput"
         class="input-box"
         placeholder="Enter a URL or Search"
       />
+      <div id="searchResults" class="search-results"></div>
       <p class="description"></p>
     </div>
+
+    <script>
+      // Sample data to search from
+      const items = [
+        "Google",
+        "The Pizza Edition",
+        "CoolMath Games",
+        "YouTube",
+        "Szvy Central V2",
+      ];
+
+      // Function to filter items based on search query
+      function searchItems(query) {
+        return items.filter((item) =>
+          item.toLowerCase().includes(query.toLowerCase())
+        );
+      }
+
+      // Handling search input
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", (event) => {
+          const query = event.target.value;
+          const resultsContainer = document.getElementById("searchResults");
+          resultsContainer.innerHTML = ""; // Clear previous results
+
+          if (query) {
+            const results = searchItems(query);
+            if (results.length === 0) {
+              resultsContainer.innerHTML =
+                "<div class='result-item'>No results found</div>";
+            } else {
+              results.forEach((result) => {
+                const resultItem = document.createElement("div");
+                resultItem.classList.add("result-item");
+                resultItem.textContent = result;
+
+                // Add click event to open Google search for the clicked term
+                resultItem.addEventListener("click", () => {
+                  const googleSearchURL = `https://www.bing.com/search?q=${encodeURIComponent(
+                    result
+                  )}`;
+                  window.open(googleSearchURL, "_blank");
+                });
+
+                resultsContainer.appendChild(resultItem);
+              });
+            }
+          }
+        });
+    </script>
   </body>
 </html>
-<html></html>
-<div
- 
