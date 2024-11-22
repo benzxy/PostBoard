@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -164,7 +164,7 @@
       >
       <a href="https://chstextbook.github.io/">Games</a>
       <a href="#">Discord</a>
-      <a href="https://y99.in/web/login">Chatroom</a>
+      <a href="#">Chatroom</a>
       <a href="#">Settings</a>
       <a href="#"></a>
     </nav>
@@ -185,11 +185,11 @@
     <script>
       // Sample data to search from
       const items = [
-        "Google",
+        "Github",
+        "Cool Math",
         "The Pizza Edition",
-        "CoolMath Games",
-        "YouTube",
-        "Szvy Central V2",
+        "Youtube",
+        "Games",
       ];
 
       // Function to filter items based on search query
@@ -220,9 +220,9 @@
 
                 // Add click event to open Google search for the clicked term
                 resultItem.addEventListener("click", () => {
-                  const googleSearchURL = https://www.bing.com/search?q=${encodeURIComponent(
+                  const googleSearchURL = `https://www.bing.com/search?q=${encodeURIComponent(
                     result
-                  )};
+                  )}`;
                   window.open(googleSearchURL, "_blank");
                 });
 
