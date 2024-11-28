@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+\<!DOCTYPE html> <link rel="icon" href="<link rel="icon" con"
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,169 +14,232 @@
       }
 
       body {
-        background-color: #000;
-        color: #000; /* Set text to black */
         font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
         overflow: hidden;
       }
 
-      /* Topographic Background */
-      .topo-bg {
+      /* Background for Moving Dots */
+      .dot-background {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
-        background: url("https://steamuserimages-a.akamaihd.net/ugc/1859423535645368210/89603E0B0D184BD3962118D53EE720181283CFC4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=fals")
-          center/cover no-repeat;
         overflow: hidden;
+        z-index: -1;
+      }
+
+      .dot {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 50%;
+        animation: move 10s linear infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          transform: translate(calc(100vw - 50px), calc(100vh - 50px));
+          opacity: 0;
+        }
       }
 
       /* Navbar */
       nav {
-        background-color: #f0f0f0;
         display: flex;
-        justify-content: space-around;
-        padding: 15px;
-        font-size: 18px;
+        justify-content: space-between;
+        padding: 15px 30px;
+        background-color: rgba(0, 0, 0, 0.7);
       }
 
       nav a {
-        color: #000; /* Text color black */
+        color: #fff;
         text-decoration: none;
-        padding: 10px;
-        position: relative;
+        margin: 0 10px;
+        font-size: 18px;
       }
 
       nav a:hover {
-        color: #555;
+        color: #aaa;
       }
 
-      nav a.active {
-        color: #000;
-      }
-
-      /* Main Content */
+      /* Title Section */
       .container {
         text-align: center;
-        padding-top: 100px;
+        margin-top: 100px;
       }
 
       .title {
-        font-size: 48px;
+        font-size: 60px;
         font-weight: bold;
-        color: #000;
+        text-transform: uppercase;
         margin-bottom: 20px;
       }
 
       .input-box {
-        margin: 20px auto;
-        width: 500px;
+        width: 50%;
         padding: 15px;
-        border: 2px solid transparent;
-        border-radius: 8px;
         font-size: 18px;
-        background-color: #f0f0f0;
-        color: #000;
-        text-align: center;
+        border: 2px solid #555;
         outline: none;
-        transition: all 0.3s;
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+        margin: 20px auto;
+        border-radius: 0; /* Keeps the search bar square */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
       }
 
-      .input-box:hover,
       .input-box:focus {
-        border-color: #555;
-        box-shadow: 0 0 10px #555, 0 0 20px #555;
+        background-color: #fff; /* Changes color to white on focus */
+        color: #000; /* Changes text color to black on focus */
+        border-color: #fff;
       }
 
-      .description {
-        margin-top: 20px;
-        font-size: 18px;
-        color: #555;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+      /* Quick Links */
+      .quick-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
       }
 
-      /* Date and Time */
+      .quick-link {
+        width: 100px;
+        height: 100px;
+        background-color: #333;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .quick-link:hover {
+        background-color: #fff; /* Changes box background to white on hover */
+        color: #000; /* Changes text color to black on hover */
+      }
+
+      .quick-link img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+      /* Footer Date/Time */
       .date-time {
-        margin-top: 20px;
-        font-size: 24px;
-        font-weight: bold;
-        color: #000;
+        margin-top: 30px;
+        font-size: 18px;
+        color: #aaa;
       }
     </style>
   </head>
   <body>
-    <!-- Animated Topographic Background -->
-    <div class="topo-bg"></div>
+    <!-- Moving Dots Background -->
+    <div class="dot-background"></div>
 
     <!-- Navbar -->
     <nav>
-      <a href="https://benzxy.github.io/GeoMathlyV2.github.io/" class="active"
-        >Home</a
-      >
-      <a href="https://chstextbook.github.io/">Games</a>
-      <a href="#">Discord</a>
-      <a href="#">Chatroom</a>
-      <a href="#">Settings</a>
-      <a href="#"></a>
+      <div class="logo">AuroraProxy</div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="https://chstextbook.github.io/">Games</a>
+        <a href="#">Discord</a>
+        <a href="#">Settings</a>
+      </div>
     </nav>
 
     <!-- Main Content -->
     <div class="container">
-      <div class="title">AuroraProxy</div>
+      <div class="title">Aurora Proxy V2</div>
       <input
         type="text"
-        id="searchInput"
         class="input-box"
-        placeholder="Enter a URL or Search"
+        placeholder="Search freely with Szvy Central..."
       />
-      <div id="searchResults" class="search-results"></div>
-      <p class="description"></p>
+      <div class="quick-links">
+        <a href="https://www.google.com" class="quick-link">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
+            alt="Google"
+          />
+          Google
+        </a>
+        <a href="https://now.gg" class="quick-link">
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1000/1*YM7t6RluDCb0XT62yy2aqQ.png"
+            alt="Now.GG"
+          />
+          Now.gg
+        </a>
+        <a href="https://www.nvidia.com/en-us/geforce-now/" class="quick-link">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/235_Nvidia_logo-512.png"
+            alt="GeForce Now"
+          />
+          GeForce Now
+        </a>
+        <a href="https://www.tiktok.com" class="quick-link">
+          <img
+            src="https://static.wikia.nocookie.net/dreamlogos/images/4/46/1657454215tiktok_logo_png_%282%29.png/revision/latest?cb=20230806045623"
+            alt="TikTok"
+          />
+          TikTok
+        </a>
+        <a href="#" class="quick-link">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/55/Add.svg"
+            alt="Add Site"
+          />
+          Add Site
+        </a>
+      </div>
       <div class="date-time" id="dateTime"></div>
-      <!-- Date and Time -->
     </div>
 
     <script>
+      // Create Moving Dots
+      const dotBackground = document.querySelector(".dot-background");
+
+      function createDot() {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        dot.style.top = Math.random() * window.innerHeight + "px";
+        dot.style.left = Math.random() * window.innerWidth + "px";
+        dot.style.animationDuration = Math.random() * 15 + 5 + "s"; // Random duration between 5-20s
+        dotBackground.appendChild(dot);
+
+        // Remove dot after animation
+        setTimeout(() => {
+          dot.remove();
+        }, 20000);
+      }
+
+      // Generate dots at intervals
+      setInterval(createDot, 200);
+
+      // Date and Time
       function updateDateTime() {
         const dateTimeElement = document.getElementById("dateTime");
         const now = new Date();
-
-        // Get the day and time
-        const days = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ];
-        const day = days[now.getDay()];
-
-        let hours = now.getHours();
-        const minutes = now.getMinutes().toString().padStart(2, "0");
-        const seconds = now.getSeconds().toString().padStart(2, "0");
-
-        // Determine AM or PM
-        const ampm = hours >= 12 ? "PM" : "AM";
-
-        // Convert to 12-hour format
-        hours = hours % 12;
-        hours = hours ? hours : 12; // Handle midnight (0 should be 12)
-
-        // Format the time
-        const time = `${hours}:${minutes}:${seconds} ${ampm}`;
-
-        // Set the content
-        dateTimeElement.textContent = `Today is ${day}, Current time: ${time}`;
+        dateTimeElement.textContent = now.toLocaleString();
       }
-
-      // Update the date and time every second
       setInterval(updateDateTime, 1000);
-      updateDateTime(); // Initial call
+      updateDateTime();
     </script>
   </body>
 </html>
