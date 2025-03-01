@@ -1,25 +1,27 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OldChan</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <title>NestBoard</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="header">
-      <h1>OldChan - /b/ - Random</h1>
-    </div>
-
-    <div class="post-form">
-      <input type="text" id="name" placeholder="Name (optional)" />
-      <textarea id="postContent" placeholder="Type your post..."></textarea>
-      <button onclick="submitPost()">Post</button>
-    </div>
-
-    <div id="posts">
-      <!-- Posts will appear here -->
-    </div>
+    <header>
+      <h1>NestBoard</h1>
+    </header>
+    <main>
+      <div id="posts"></div>
+      <form id="postForm">
+        <input type="text" id="postName" placeholder="Name" required />
+        <textarea
+          id="postContent"
+          placeholder="Write a post..."
+          required
+        ></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>
