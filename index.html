@@ -3,79 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Locked Browser</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
+    <title>OldChan</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- 🔐 Wall Blocking Access -->
-    <div id="wall" class="wall">
-      <div class="wall-content">
-        <h2>🔒 Enter Access Code</h2>
-        <input type="text" id="access-code" placeholder="Enter code..." />
-        <button onclick="checkCode()" class="btn primary">Unlock</button>
-        <p id="error-message" class="error-message"></p>
-      </div>
+    <div class="header">
+      <h1>OldChan - /b/ - Random</h1>
     </div>
 
-    <!-- ✅ Main Website (Hidden Until Code is Entered) -->
-    <div id="main-content" class="hidden">
-      <div class="container">
-        <!-- Search Section -->
-        <div class="search-section">
-          <img src="logo.png" alt="Logo" class="logo" />
-          <p class="instruction">Click on the URL bar to start searching.</p>
-          <input
-            type="text"
-            class="search-bar"
-            value="https://www.google.com"
-          />
-          <div class="button-group">
-            <button class="btn">Open in-browser</button>
-            <button class="btn">Open AB cloaked</button>
-            <button class="btn primary">Open direct</button>
-          </div>
-          <p>Join the <a href="#">Discord server</a> for help or just chill.</p>
-        </div>
+    <div class="post-form">
+      <input type="text" id="name" placeholder="Name (optional)" />
+      <textarea id="postContent" placeholder="Type your post..."></textarea>
+      <button onclick="submitPost()">Post</button>
+    </div>
 
-        <!-- Ticket Panel -->
-        <div class="ticket-panel">
-          <p></a></p>
-          <p>or click <a href="#">here</a> if you can't access it.</p>
-          <hr />
-          <h3>🎟️ Speed Ticket Panel 🎟️</h3>
-          <label>Code:</label>
-          <input
-            type="text"
-            class="code-input"
-            value=""
-          />
-          <button class="btn primary">Enter</button>
-          <p>Dedicated speed ⚡: <span class="status off">Off</span></p>
-          <p>
-            VPN selection 🌍:
-            <select class="dropdown">
-              <option>US (default)</option>
-            </select>
-            <button class="btn">Apply</button>
-          </p>
-          <p>
-            General adblock 🚫: <button class="btn disabled">Turn on</button>
-          </p>
-          <p>
-            YouTube adblock 🚫: <button class="btn disabled">Turn on</button>
-          </p>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-          <p>Browser version: v1.1.5 | Rammerhead version: v1.2.7</p>
-          <p>
-            <a href="#">(view browser changelog here)</a> |
-            <a href="#">(view Rammerhead changelog here)</a>
-          </p>
-        </div>
-      </div>
+    <div id="posts">
+      <!-- Posts will appear here -->
     </div>
   </body>
 </html>
