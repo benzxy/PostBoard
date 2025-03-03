@@ -1,7 +1,7 @@
 // Function to proceed to the main content page or redirect to another website
 function proceedToMain() {
   // Redirect to the desired URL (replace with your actual website URL)
-  window.location.href = "https://yourwebsite.com"; // Replace with your URL
+  window.location.href = "https://gtxy39.csb.app/"; // Replace with your URL
 }
 
 // Function to leave the site (redirect to another page)
