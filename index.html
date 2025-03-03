@@ -3,25 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NestBoard</title>
+    <title>Warning: Graphic Content</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>NestBoard</h1>
-    </header>
-    <main>
-      <div id="posts"></div>
-      <form id="postForm">
-        <input type="text" id="postName" placeholder="Name" required />
-        <textarea
-          id="postContent"
-          placeholder="Write a post..."
-          required
-        ></textarea>
-        <button type="submit">Post</button>
-      </form>
-    </main>
-    <script src="script.js"></script>
+    <!-- Full-screen warning page -->
+    <div id="warning-page" class="warning-container">
+      <h1 class="warning-title">Warning: Graphic Content</h1>
+      <p class="warning-message">
+        This website contains graphic content that may be disturbing, including
+        violence and gore. Viewer discretion is advised.
+      </p>
+      <div class="buttons">
+        <button class="button-continue" onclick="proceedToMain()">
+          Proceed
+        </button>
+        <button class="button-leave" onclick="leaveSite()">Leave</button>
+      </div>
+    </div>
   </body>
 </html>
