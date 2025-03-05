@@ -3,24 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warning: Graphic Content</title>
+    <title>Street Fights 🥊</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- Full-screen warning page -->
-    <div id="warning-page" class="warning-container">
-      <h1 class="warning-title">Warning: Graphic Content</h1>
-      <p class="warning-message">
-        This website contains graphic content that may be disturbing, including
-        violence and gore. Viewer discretion is advised.
-      </p>
-      <div class="buttons">
-        <button class="button-continue" onclick="proceedToMain()">
-          Proceed
-        </button>
-        <button class="button-leave" onclick="leaveSite()">Leave</button>
-      </div>
-    </div>
+    <header>
+      <h1>Street Fights 🥊</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="video-section">
+        <h2>Featured Videos</h2>
+        <div class="video-container">
+          <!-- Video 1 -->
+          <video controls class="video-player">
+            <source src="myvideo1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <!-- Video 2 -->
+          <video controls class="video-player">
+            <source src="myvideo2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <!-- Video 3 -->
+          <video controls class="video-player">
+            <source src="myvideo3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <!-- Video 4 -->
+          <video controls class="video-player">
+            <source src="myvideo4.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <!-- Video 5 -->
+          <video controls class="video-player">
+            <source src="myvideo5.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 LiveLeak Clone. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
