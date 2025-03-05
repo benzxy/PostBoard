@@ -1,89 +1,84 @@
-=/* General body and page styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Header */
+header {
+  background-color: #1e1e1e;
+  padding: 15px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
 }
 
-/* Warning page (full-screen overlay) */
-.warning-container {
-  background-color: #f8d7da;
-  color: #721c24;
-  padding: 30px;
-  border-radius: 10px;
-  border: 2px solid #f5c6cb;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  z-index: 1000; /* Make sure it's above the main content */
 }
 
-/* Hidden main content */
-.hidden {
-  display: none;
+nav ul li {
+  margin-left: 20px;
 }
 
-/* Styling for the warning title */
-.warning-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: bold;
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
-/* Styling for the warning message */
-.warning-message {
-  font-size: 1.2em;
-  margin-bottom: 25px;
-  line-height: 1.5;
+nav ul li a:hover {
+  color: #ff0000;
 }
 
-/* Styling for buttons */
-.buttons {
-  display: flex;
-  gap: 20px;
-}
-
-.button-continue,
-.button-leave {
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-continue {
-  background-color: #28a745; /* Green for proceed */
-}
-
-.button-continue:hover {
-  background-color: #218838;
-}
-
-.button-leave {
-  background-color: #dc3545; /* Red for leave */
-}
-
-.button-leave:hover {
-  background-color: #c82333;
-}
-
-/* Main content area */
-#main-content {
-  text-align: center;
+/* Main Content */
+main {
   padding: 20px;
+  text-align: center;
 }
 
+#video-section h2 {
+  text-align: center;
+}
+
+/* Video Container */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Video Styling */
+video {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 5px;
+  border: 2px solid #ff0000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1e1e1e;
+  margin-top: 20px;
+}
