@@ -1,120 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Street Fights 🥊</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* Add CSS styles directly for convenience */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      header {
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-      }
-      nav ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      nav ul li {
-        display: inline;
-        margin: 0 10px;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-      }
-      .video-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 20px;
-      }
-      .video-item {
-        width: 100%;
-        max-width: 600px; /* Maximum width for each video */
-        margin-bottom: 20px;
-      }
-      .video-player {
-        width: 100%; /* Set video width to 100% of the container */
-        height: auto; /* Maintain aspect ratio */
-      }
-      footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #333;
-        color: white;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center videos */
+            padding: 20px;
+        }
+        .video-item {
+            width: 100%; /* Full width on small screens */
+            max-width: 600px; /* Maximum width for larger screens */
+            margin: 10px; /* Margin between videos */
+        }
+        .video-player {
+            width: 100%; /* Responsive width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>Street Fights 🥊</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+        <h1>Street Fights 🥊</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-      <section id="video-section">
-        <h2>Hall Of Autism</h2>
-        <div class="video-container">
-          <!-- Video 1 -->
-          <div class="video-item">
-            <h3>Title of Video 1</h3>
-            <video controls class="video-player">
-              <source src="mango.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <!-- Video 2 -->
-          <div class="video-item">
-            <h3>Title of Video 2</h3>
-            <video controls class="video-player">
-              <source src="swisscheese.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <!-- Video 3 -->
-          <div class="video-item">
-            <h3>Title of Video 3</h3>
-            <video controls class="video-player">
-              <source src="nike.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <!-- Video 4 -->
-          <div class="video-item">
-            <h3>Title of Video 4</h3>
-            <video controls class="video-player">
-              <source src="sneea.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <!-- Video 5 -->
-          <div class="video-item">
-            <h3>Title of Video 5</h3>
-            <video controls class="video-player">
-              <source src="soccerball.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
+        <section id="video-section">
+            <h2>Hall Of Autism</h2>
+            <div class="video-container">
+                <!-- Video 1 -->
+                <div class="video-item">
+                    <h3>Title of Video 1</h3>
+                    <video controls class="video-player">
+                        <source src="mango.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Video 2 -->
+                <div class="video-item">
+                    <h3>Title of Video 2</h3>
+                    <video controls class="video-player">
+                        <source src="swisscheese.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Video 3 -->
+                <div class="video-item">
+                    <h3>Title of Video 3</h3>
+                    <video controls class="video-player">
+                        <source src="nike.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Video 4 -->
+                <div class="video-item">
+                    <h3>Title of Video 4</h3>
+                    <video controls class="video-player">
+                        <source src="sneea.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Video 5 -->
+                <div class="video-item">
+                    <h3>Title of Video 5</h3>
+                    <video controls class="video-player">
+                        <source src="soccerball.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-      <p>&copy; 2025 LiveLeak Clone. All rights reserved.</p>
+        <p>&copy; 2025 LiveLeak Clone. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
